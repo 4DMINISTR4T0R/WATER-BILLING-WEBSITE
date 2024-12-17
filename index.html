@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Billing System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Water Billing System</h1>
+    <p>Manage your water bill records efficiently.</p>
+  </header>
+
+  <main>
+    <h2>Enter Billing Details</h2>
+    <form id="billingForm">
+      <label for="name">Customer Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter customer's name" required>
+
+      <label for="meterNo">Meter Number:</label>
+      <input type="text" id="meterNo" name="meterNo" placeholder="Enter meter number" required>
+
+      <label for="units">Units Consumed (in m³):</label>
+      <input type="number" id="units" name="units" placeholder="Enter water units consumed" required>
+
+      <label for="rate">Rate per Unit (in $):</label>
+      <input type="number" id="rate" name="rate" placeholder="Enter rate per unit" required>
+
+      <button type="submit">Add Bill</button>
+    </form>
+
+    <section id="bills">
+      <h2>Bills Recorded</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Customer Name</th>
+            <th>Meter Number</th>
+            <th>Units Consumed</th>
+            <th>Rate per Unit</th>
+            <th>Total Amount</th>
+          </tr>
+        </thead>
+        <tbody id="billList">
+          <tr>
+            <td>John Doe</td>
+            <td>1001</td>
+            <td>50</td>
+            <td>$2</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>1002</td>
+            <td>30</td>
+            <td>$2.5</td>
+            <td>$75</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Water Billing System | Contact us at <a href="mailto:info@waterbilling.com">info@waterbilling.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
